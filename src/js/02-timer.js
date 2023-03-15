@@ -5,10 +5,10 @@ import Notiflix from 'notiflix';
 
 const inputDate = document.querySelector('#datetime-picker');
 const startBtn = document.querySelector('button[data-start]');
-const days = document.querySelector('span[data-days]');
-const hours = document.querySelector('span[data-hours]');
-const mins = document.querySelector('span[data-minutes]');
-const secs = document.querySelector('span[data-seconds]');
+const daysRef = document.querySelector('span[data-days]');
+const hoursRef = document.querySelector('span[data-hours]');
+const minsRef = document.querySelector('span[data-minutes]');
+const secsRef = document.querySelector('span[data-seconds]');
 let timerId = null;
 
 startBtn.disabled = true;
@@ -45,13 +45,13 @@ const options = {
 };
 
 function updateTimerFace({ days, hours, minutes, seconds }) {
-  days.textContent = `${days}`;
-  hours.textContent = `${hours}`;
-  mins.textContent = `${minutes}`;
-  secs.textContent = `${seconds}`;
+  daysRef.textContent = `${days}`;
+  hoursRef.textContent = `${hours}`;
+  minsRef.textContent = `${minutes}`;
+  secsRef.textContent = `${seconds}`;
 }
-function addLeadingZero({ days, hours, minutes, seconds }) {
-  return String({ days, hours, minutes, seconds }).padStart(2, '0');
+function addLeadingZero(value) {
+  return String(value).padStart(2, '0');
 }
 
 function convertMs(ms) {
