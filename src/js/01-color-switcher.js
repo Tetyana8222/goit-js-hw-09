@@ -25,3 +25,4 @@ stopBtn.addEventListener('click', () => {
   //activation of button
   startBtn.disabled = false;
 });
+
