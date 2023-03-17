@@ -16,3 +16,67 @@ img {
   display: block;
   max-width: 100%;
 }
+#datetime-picker {
+  border: solid 3px #212121;
+  border-radius: 5px;
+  padding: 5px 7px;
+  text-align: center;
+  margin-right: 30px;
+  font-size: 15px;
+  box-shadow: #212121;
+}
+
+button[data-start] {
+  border: solid 3px #212121;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+button[data-stop] {
+  border: solid 3px #212121;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  background-color: aliceblue;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-direction: row;
+  background: linear-gradient(
+    -45deg,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab,
+    #ae4477,
+    #0aff5e,
+    #102bff
+  );
+  background-size: 500% 500%;
+  animation: gradient 30s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 25% 75%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 25% 75%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
