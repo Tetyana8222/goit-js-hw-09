@@ -33,11 +33,16 @@ function handleSubmit(event) {
   for (let i = 1; i <= amountInput; i += 1) {
     createPromise(i, delayInput)
       .then(({ position, delay }) => {
-        console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
+        Notiflix.Notify.success(
+          `✅ Fulfilled promise ${position} in ${delay}ms`
+        );
       })
       .catch(({ position, delay }) => {
-        console.log(`❌ Rejected promise ${position} in ${delay}ms`);
+        Notiflix.Notify.failure(
+          `❌ Rejected promise ${position} in ${delay}ms`
+        );
       });
+    delayInput += stepInput;
   }
   event.currentTarget.reset();
 }
