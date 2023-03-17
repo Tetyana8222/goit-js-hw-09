@@ -38,7 +38,7 @@ const options = {
             clearInterval(timerId);
           }
         }, 1000);
-        console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+        // console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
       }
     }
   },
